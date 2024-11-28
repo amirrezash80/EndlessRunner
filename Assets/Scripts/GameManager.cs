@@ -5,8 +5,6 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
-    public static int difficulty;
-
     private float score;
     public Text scoreUI;
     private int highscore;
@@ -128,7 +126,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetHighScore()
     {
-        PlayerPrefs.DeleteKey("Highscore" + difficulty); // حذف High Score مربوط به سطح فعلی
+        PlayerPrefs.DeleteKey("Highscore"); // حذف High Score مربوط به سطح فعلی
         highscore = 0; // مقداردهی مجدد
         highscoreUI.text = "High Score: " + highscore; // به‌روزرسانی UI
     }
@@ -141,7 +139,7 @@ public class GameManager : MonoBehaviour
         highscore = PlayerPrefs.GetInt("Highscore", 0);
         highscoreUI.text = "High Score: " + highscore;
 
-        // Invoke obstacle spawning, frequency depends on difficulty
+        // Invoke obstacle spawning
         InvokeRepeating("Spawn", 1f, 0.5f );
     }
 }
