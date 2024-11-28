@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     private float score;
     public Text scoreUI;
     private int highscore;
-    public Text highscoreUI; // Reference to the new highscore UI text
+    public Text highscoreUI; 
 
     public Transform player;
     public PlayerMovement movement;
@@ -92,13 +92,18 @@ public class GameManager : MonoBehaviour
         {
             score += Time.deltaTime * 10;
             scoreUI.text = "Score: " + (int)score;
-            highscoreUI.text = "High Score: " + highscore; // Update high score display
+            highscoreUI.text = "High Score: " + highscore; 
         }
 
         if (Input.GetKey("r"))
         {
             SwitchScene(1);
             return;
+        }
+        if (Input.GetKeyDown(KeyCode.H)) // اگر کلید H فشرده شود
+        {
+            ResetAllData();
+            ResetHighScore(); // ریست High Score
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -113,6 +118,19 @@ public class GameManager : MonoBehaviour
             }
             return;
         }
+    }
+    public void ResetAllData()
+    {
+        PlayerPrefs.DeleteAll(); // پاک کردن تمام داده‌های ذخیره‌شده
+        highscore = 0;
+        highscoreUI.text = "High Score: " + highscore;
+    }
+
+    public void ResetHighScore()
+    {
+        PlayerPrefs.DeleteKey("Highscore" + difficulty); // حذف High Score مربوط به سطح فعلی
+        highscore = 0; // مقداردهی مجدد
+        highscoreUI.text = "High Score: " + highscore; // به‌روزرسانی UI
     }
 
     private void Start()
