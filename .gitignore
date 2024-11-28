@@ -1,0 +1,23 @@
+# User-specific files
+*.user
+*.userprefs
+
+# Build results
+[Bb]in/
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# macOS
+.DS_Store
+
+# IDE-specific files
+.vscode/
+.idea/
+*.suo
+*.user
+
