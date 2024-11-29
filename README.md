@@ -69,7 +69,7 @@ During the development of this game, several challenges were encountered, includ
 ---
 
 ## Additional Features to Add
-- **Sound Effects and Music:** Adding background music and sound effects for player actions like jumping and colliding with obstacles.
+- **Sound Effects and Music:** Adding background music and sound effects for player actions like running and colliding with obstacles.
 
 ---
 
