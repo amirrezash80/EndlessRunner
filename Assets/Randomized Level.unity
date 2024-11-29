@@ -1254,6 +1254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreUI: {fileID: 270040365}
   highscoreUI: {fileID: 1308654340}
+  audioSource: {fileID: 189540126}
   player: {fileID: 381992090}
   movement: {fileID: 381992091}
   obstaclePrefab: {fileID: 1172867454525566, guid: 15c886513269944ec9895782ec55627d,
@@ -1942,12 +1943,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 189540124}
   - {fileID: 132923334}
   - {fileID: 1517332747}
   - {fileID: 270040364}
   - {fileID: 1308654339}
   - {fileID: 1427212645}
-  - {fileID: 189540124}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

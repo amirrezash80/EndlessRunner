@@ -20,7 +20,6 @@ public class MainMenu : MonoBehaviour
 
 	public void StartGame(int difficulty)
 	{
-		GameManager.difficulty = difficulty;
 
 		StartCoroutine(SceneTransition(1));
 	}
